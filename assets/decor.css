@@ -47,7 +47,7 @@
 /* ---------- illustrated event artwork (miniature-painting panels) ---------- */
 .event.has-art{overflow:hidden}
 .event-art{margin:-1.7rem -1.5rem 0;line-height:0}
-.event-art img{display:block;width:100%;height:auto;aspect-ratio:376/504;object-fit:cover}
+.event-art img{display:block;width:100%;height:auto}
 .icon-badge{
   position:relative;z-index:2;width:3rem;height:3rem;margin:-1.5rem auto .5rem;
   background:linear-gradient(180deg,var(--card),var(--card-deep));
@@ -56,10 +56,6 @@
   box-shadow:0 4px 10px rgba(85,58,16,.35);
 }
 .icon-badge .icon{font-size:1.4rem}
-
-.events-banner{display:block;max-width:220px;margin:0 auto 2.4rem;border-radius:16px;overflow:hidden;
-  border:1px solid var(--sand-carve);box-shadow:0 10px 26px rgba(85,58,16,.22)}
-.events-banner img{display:block;width:100%;height:auto}
 
 .venue-art{display:block;width:200px;max-width:60%;margin:1.5rem auto 0;border-radius:12px;
   border:1px solid var(--sand-carve);box-shadow:0 8px 20px rgba(85,58,16,.25)}
@@ -75,6 +71,5 @@
   .toran-row .bit:nth-child(3n){font-size:.72rem}
   .toran-row .bit:nth-child(4n){display:none}
   .event-art{margin:-1.4rem -1.2rem 0}
-  .events-banner{max-width:170px;margin-bottom:1.8rem}
   .venue-art{width:150px}
 }
