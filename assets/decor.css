@@ -1,0 +1,80 @@
+/* ============================================================
+   Shared decorative motifs — falling petals, toran garland,
+   twinkling diyas. Used across index / groom / bride / reception.
+   ============================================================ */
+
+/* ---------- falling petals (marigold & rose) ---------- */
+.petal-field{position:fixed;inset:0;pointer-events:none;z-index:45;overflow:hidden}
+.petal{position:absolute;top:-8%;left:0;will-change:transform,opacity;animation:petal-fall linear infinite}
+.petal svg{display:block;filter:drop-shadow(0 1px 2px rgba(80,50,10,.25))}
+@keyframes petal-fall{
+  0%{transform:translate3d(0,-10vh,0) rotate(0deg);opacity:0}
+  6%{opacity:.9}
+  92%{opacity:.85}
+  100%{transform:translate3d(var(--drift,40px),112vh,0) rotate(var(--spin,320deg));opacity:0}
+}
+
+/* ---------- toran: garland of mango leaves, marigolds & bells ---------- */
+.toran{
+  position:relative;z-index:55;overflow:hidden;
+  background:linear-gradient(180deg,#173C2C,#1B4432);
+  border-bottom:1px solid rgba(201,153,63,.35);
+  padding:.35rem 0 .55rem;
+}
+.toran-row{
+  display:flex;align-items:flex-start;justify-content:space-evenly;
+  max-width:1200px;margin:0 auto;padding:0 .5rem;
+}
+.toran-row .bit{
+  font-size:1.1rem;line-height:1;display:inline-block;
+  animation:toran-sway 3.2s ease-in-out infinite;transform-origin:top center;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));
+}
+.toran-row .bit:nth-child(odd){animation-delay:-1.05s}
+.toran-row .bit:nth-child(3n){animation-delay:-2.1s;font-size:.85rem}
+@keyframes toran-sway{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
+
+/* ---------- twinkling diya accents ---------- */
+.diya-row{display:flex;justify-content:center;gap:1rem;margin:.7rem 0 0}
+.diya-row .diya{font-size:1.15rem;display:inline-block;animation:diya-flicker 2.3s ease-in-out infinite}
+.diya-row .diya:nth-child(2n){animation-delay:-.75s}
+.diya-row .diya:nth-child(3n){animation-delay:-1.5s}
+@keyframes diya-flicker{
+  0%,100%{transform:scale(1) translateY(0);opacity:1}
+  50%{transform:scale(1.1) translateY(-2px);opacity:.82}
+}
+
+/* ---------- illustrated event artwork (miniature-painting panels) ---------- */
+.event.has-art{overflow:hidden}
+.event-art{margin:-1.7rem -1.5rem 0;line-height:0}
+.event-art img{display:block;width:100%;height:auto;aspect-ratio:376/504;object-fit:cover}
+.icon-badge{
+  position:relative;z-index:2;width:3rem;height:3rem;margin:-1.5rem auto .5rem;
+  background:linear-gradient(180deg,var(--card),var(--card-deep));
+  border:2px solid var(--gold-bright);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 10px rgba(85,58,16,.35);
+}
+.icon-badge .icon{font-size:1.4rem}
+
+.events-banner{display:block;max-width:220px;margin:0 auto 2.4rem;border-radius:16px;overflow:hidden;
+  border:1px solid var(--sand-carve);box-shadow:0 10px 26px rgba(85,58,16,.22)}
+.events-banner img{display:block;width:100%;height:auto}
+
+.venue-art{display:block;width:200px;max-width:60%;margin:1.5rem auto 0;border-radius:12px;
+  border:1px solid var(--sand-carve);box-shadow:0 8px 20px rgba(85,58,16,.25)}
+
+@media (prefers-reduced-motion: reduce){
+  .petal-field{display:none}
+  .toran-row .bit{animation:none}
+  .diya-row .diya{animation:none}
+}
+@media (max-width:620px){
+  .toran{padding:.25rem 0 .4rem}
+  .toran-row .bit{font-size:.92rem}
+  .toran-row .bit:nth-child(3n){font-size:.72rem}
+  .toran-row .bit:nth-child(4n){display:none}
+  .event-art{margin:-1.4rem -1.2rem 0}
+  .events-banner{max-width:170px;margin-bottom:1.8rem}
+  .venue-art{width:150px}
+}
