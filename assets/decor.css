@@ -57,8 +57,7 @@
 }
 .icon-badge .icon{font-size:1.4rem}
 
-.venue-art{display:block;width:320px;height:auto;max-width:85%;margin:1.6rem auto 0;border-radius:14px;
-  border:1px solid var(--sand-carve);box-shadow:0 10px 26px rgba(85,58,16,.25)}
+.venue-art{display:block;width:100%;height:auto;margin:0}
 
 @media (prefers-reduced-motion: reduce){
   .petal-field{display:none}
