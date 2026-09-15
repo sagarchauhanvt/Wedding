@@ -57,8 +57,8 @@
 }
 .icon-badge .icon{font-size:1.4rem}
 
-.venue-art{display:block;width:200px;max-width:60%;margin:1.5rem auto 0;border-radius:12px;
-  border:1px solid var(--sand-carve);box-shadow:0 8px 20px rgba(85,58,16,.25)}
+.venue-art{display:block;width:320px;max-width:85%;margin:1.6rem auto 0;border-radius:14px;
+  border:1px solid var(--sand-carve);box-shadow:0 10px 26px rgba(85,58,16,.25)}
 
 @media (prefers-reduced-motion: reduce){
   .petal-field{display:none}
@@ -71,5 +71,4 @@
   .toran-row .bit:nth-child(3n){font-size:.72rem}
   .toran-row .bit:nth-child(4n){display:none}
   .event-art{margin:-1.4rem -1.2rem 0}
-  .venue-art{width:150px}
 }
